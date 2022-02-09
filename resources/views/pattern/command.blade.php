@@ -3,7 +3,7 @@
 <body class="antialiased">
     <h1>Command</h1>
     <p>
-        MDR aucune diable d'idée !
+        Selon moi, le DP command est similaire à l'usage de la classe parente Controller.
     </p>
     <a href="{{ url()->previous() }}">Back</a>
 </body>
