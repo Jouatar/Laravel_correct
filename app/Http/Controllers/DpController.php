@@ -11,6 +11,7 @@ use App\Models\Factory\VoitureFactory;
 use App\Models\Facade\Facade;
 use App\Models\Observer\Observer;
 use App\Models\Observer\Sujet;
+use App\Models\State\Construire;
 use App\Models\Strategie\FactureLine;
 use App\Models\Template\TemplateEnfant1;
 use App\Models\Template\TemplateEnfant2;
@@ -80,6 +81,7 @@ class DpController extends Controller {
       return view('pattern.chainofresponsability', []);
     }
     if($n==='11'){
+      $constr = new Construire();
       return view('pattern.state', []);
     }
     return view('error404');
