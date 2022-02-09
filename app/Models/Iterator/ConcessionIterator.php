@@ -11,7 +11,7 @@ class ConcessionIterator{
 
     public function hasNext(){
         return isset($this->tabVoiture[$this->position]);
-    } 
+    }
 
     public function next(){
         $voiture = $this->tabVoiture[$this->position];

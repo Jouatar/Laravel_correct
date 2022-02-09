@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Composite\VoitureC;
+use App\Models\Composite\VoitureFactoryC;
 use App\Models\Facade\Concession;
 use App\Models\Singleton;
 use App\Models\Factory\VoitureFactory;
@@ -70,7 +72,9 @@ class DpController extends Controller {
       return view('pattern.command', []);
     }
     if($n==='9'){
-      return view('pattern.composite', []);
+      $voitGlobal = new VoitureC('voiture',0);
+      $factory = new VoitureFactoryC('Usine magique');
+      return view('pattern.composite', ['voiture'=>$voitGlobal, 'usine'=>$factory]);
     }
     if($n==='10'){
       return view('pattern.chainofresponsability', []);
