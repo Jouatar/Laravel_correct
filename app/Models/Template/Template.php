@@ -7,5 +7,7 @@ abstract class Template {
         return $this->getMarque();
     }
 
-    abstract public function getMarque();
+    public function getMarque(){
+        return 'Template modele';
+    }
 }
